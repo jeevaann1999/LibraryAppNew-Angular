@@ -30,7 +30,21 @@ export class UserRegistrationComponent {
       (response:any)=>
       {
         console.log(response)
-        
+        if (response.status=="success"){
+          this.name=""
+          this.address=""
+          this.pincode=""
+          this.aadhar=""
+          this.dob=""
+          this.email=""
+          this.phone=""
+          this.username=""
+          this.password=""
+          this.confirm=""
+        } else{
+          alert("something went wrong")
+  
+        }
       }
     )
   }
