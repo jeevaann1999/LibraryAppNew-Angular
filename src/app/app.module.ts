@@ -8,7 +8,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component'
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { BookEntryComponent } from './book-entry/book-entry.component';
+import { NavbarComponent } from './navbar/navbar.component'
 
 const myRoute:Routes=[
   {
@@ -22,7 +24,24 @@ const myRoute:Routes=[
   {
     path:"userregister",
     component:UserRegistrationComponent
+  },
+  {
+    path:"entry",
+    component:BookEntryComponent
+  },
+  {
+    path:"view",
+    component:UserRegistrationComponent
+  },
+  {
+    path:"search",
+    component:UserRegistrationComponent
+  },
+  {
+    path:"delete",
+    component:UserRegistrationComponent
   }
+  
 ]
 
 @NgModule({
@@ -30,7 +49,9 @@ const myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     UserLoginComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    BookEntryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
