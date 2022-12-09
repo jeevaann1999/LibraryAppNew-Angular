@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { BookEntryComponent } from './book-entry/book-entry.component';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { BookViewComponent } from './book-view/book-view.component'
 
 const myRoute:Routes=[
   {
@@ -31,7 +32,7 @@ const myRoute:Routes=[
   },
   {
     path:"view",
-    component:UserRegistrationComponent
+    component:BookViewComponent
   },
   {
     path:"search",
@@ -51,7 +52,8 @@ const myRoute:Routes=[
     UserLoginComponent,
     UserRegistrationComponent,
     BookEntryComponent,
-    NavbarComponent
+    NavbarComponent,
+    BookViewComponent
   ],
   imports: [
     BrowserModule,
